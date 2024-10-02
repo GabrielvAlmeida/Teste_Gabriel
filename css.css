@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://example.com/background-wood.jpg'); /* Substitua pela URL da sua imagem de fundo amadeirado */
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+h1, h2 {
+    color: #6a4e4c; /* Cor para os títulos */
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente para as seções */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #6a4e4c; /* Cor do botão */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8b5a5a; /* Cor do botão ao passar o mouse */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.butterfly-icon {
+    width: 20px; /* Tamanho do ícone de borboleta */
+    height: 20px;
+    vertical-align: middle; /* Alinhamento vertical */
+    margin-right: 5px; /* Espaçamento à direita */
+}
