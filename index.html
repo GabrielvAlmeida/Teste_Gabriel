@@ -6,19 +6,44 @@
     <title>Butterfly</title>
     <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .form-section {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 40%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .hidden { display: none; }
+
+
+        #psicologo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        #psicologo img {
+            border-radius: 50%;
+            width: 150px; 
+            height: 150px; 
+            margin-right: 20px; 
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Butterfly</h1>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#voluntarios">Cadastro de Voluntários</a></li>
-               
-                <li><a href="#encontrar-psicologo">Encontar Psicólogo</a></li>
-               
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="#entrar">Entrar / Criar Conta</a></li>
+                <li><a href="#entrar">Entrar</a></li>
+                <li><a href="#criar-conta">Criar Conta</a></li>
             </ul>
         </nav>
     </header>
@@ -29,70 +54,66 @@
             <p>Construindo uma Sociedade Mentalmente Saudável.</p>
         </section>
 
-        <section id="entrar">
-            <h2>Entrar ou Criar Conta</h2>
-            <form action="#" method="POST">
-                <h3>Login</h3>
-                <label for="email-login">Email:</label>
-                <input type="email" id="email-login" name="email-login" required>
-
-                <label for="senha-login">Senha:</label>
-                <input type="password" id="senha-login" name="senha-login" required>
-
-                <button type="submit">Entrar</button>
-            </form>
-
-            <form action="#" method="POST">
-                <h3>Criar Conta</h3>
-                <label for="nome-criar">Nome:</label>
-                <input type="text" id="nome-criar" name="nome-criar" required>
-
-                <label for="email-criar">Email:</label>
-                <input type="email" id="email-criar" name="email-criar" required>
-
-                <label for="senha-criar">Senha:</label>
-                <input type="password" id="senha-criar" name="senha-criar" required>
-
-                <button type="submit">Criar Conta</button>
-            </form>
+        <section id="psicologo">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/512576-icone-preto-do-glyph-do-perfil-gratis-vetor.jpg" alt="Dr. Jack Skellington"> <!-- Substitua pelo caminho da imagem -->
+            <div>
+                <h2>Conheça o Psicólogo</h2>
+                <h3>Dr. Jack Skellington</h3>
+                <p><strong>CRP:</strong> 123456/07</p>
+                <p><strong>Especialidades:</strong> Psicologia Clínica, Terapia Cognitivo-Comportamental, Terapia de Casal</p>
+                <p><strong>Formação Acadêmica:</strong> Doutor em Psicologia pela Universidade Federal do Piauí.</p>
+                <h4>Horários Disponíveis</h4>
+                <ul>
+                    <li>Segunda-feira: 14h - 18h</li>
+                    <li>Terça-feira: 9h - 13h</li>
+                    <li>Quarta-feira: 14h - 18h</li>
+                    <li>Quinta-feira: 9h - 13h</li>
+                    <li>Sexta-feira: 14h - 18h</li>
+                </ul>
+            </div>
         </section>
 
-        <section id="voluntarios">
-            <h2>Cadastro de Voluntários</h2>
+        <div class="container">
+            <section id="entrar" class="form-section">
+                <h2>Entrar</h2>
+                <form action="javascript:void(0);" onsubmit="handleLogin()">
+                    <label for="email-login">Email:</label>
+                    <input type="email" id="email-login" name="email-login" required>
+
+                    <label for="senha-login">Senha:</label>
+                    <input type="password" id="senha-login" name="senha-login" required>
+
+                    <button type="submit">Entrar</button>
+                </form>
+            </section>
+
+            <section id="criar-conta" class="form-section">
+                <h2>Criar Conta</h2>
+                <form action="#" method="POST">
+                    <label for="nome-criar">Nome:</label>
+                    <input type="text" id="nome-criar" name="nome-criar" required>
+
+                    <label for="email-criar">Email:</label>
+                    <input type="email" id="email-criar" name="email-criar" required>
+
+                    <label for="senha-criar">Senha:</label>
+                    <input type="password" id="senha-criar" name="senha-criar" required>
+
+                    <button type="submit">Criar Conta</button>
+                </form>
+            </section>
+        </div>
+
+        <section id="agendar" class="hidden">
+            <h2>Agende uma Consulta</h2>
             <form action="#" method="POST">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+                <label for="data-consulta">Data:</label>
+                <input type="date" id="data-consulta" name="data-consulta" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="hora-consulta">Horário:</label>
+                <input type="time" id="hora-consulta" name="hora-consulta" required>
 
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone">
-
-                <label for="especialidade">Especialidade:</label>
-                <input type="text" id="especialidade" name="especialidade">
-
-                <label for="crp">CRP:</label>
-                <input type="text" id="crp" name="crp" required>
-
-                <button type="submit">Cadastrar</button>
-            </form>
-        </section>
-
-        Teste_Gabriel
-        <section id="encontrar-psicologo">
-            <h2>Encontrar Psicólogo</h2>
-            <form action="#" method="GET">
-                <label for="especialidade-busca">Especialidade:</label>
-                <input type="text" id="especialidade-busca" name="especialidade-busca">
-
-                <label for="localizacao">Localização:</label>
-                <input type="text" id="localizacao" name="localizacao">
-
-                <label for="crp-busca">CRP:</label>
-                <input type="text" id="crp-busca" name="crp-busca">
-
-                <button type="submit">Buscar</button>
+                <button type="submit">Agendar</button>
             </form>
         </section>
 
@@ -114,5 +135,13 @@
         </section>
         <p>&copy; 2024 Butterfly.</p>
     </footer>
+
+    <script>
+        function handleLogin() {
+
+            alert("Login bem-sucedido!");
+            document.getElementById('agendar').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
